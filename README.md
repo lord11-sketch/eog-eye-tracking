@@ -1,5 +1,10 @@
 # EOG eye-movement direction detection: drift-removal methods compared
 
+[![CI](https://github.com/lord11-sketch/eog-eye-tracking/actions/workflows/ci.yml/badge.svg)](https://github.com/lord11-sketch/eog-eye-tracking/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.13-3776AB?logo=python&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-UNO%20R4%20WiFi-00979D?logo=arduino&logoColor=white)
+
 A two-channel electrooculography (EOG) system built for an MEng Biomedical Engineering
 project. Two BioAmp EXG Pill front ends feed the 14-bit ADC of an Arduino Uno R4 WiFi,
 which streams samples over USB serial to a Python pipeline that removes baseline drift,
