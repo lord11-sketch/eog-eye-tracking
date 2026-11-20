@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python-tests:
+    name: Python tests (${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install optional test dependency (Butterworth cross-check)
+        run: pip install scipy
+      - name: Unit tests
+        # Equivalence tests against the original scripts need the private
+        # source snapshot, which is not in the repo; they skip cleanly here.
+        run: python -m unittest discover -s tests -t . -v
+      - name: Replay verification against the recorded sessions
+        run: python -m eog verify
+
+  firmware:
+    name: Build firmware (Arduino UNO R4 WiFi)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: pio-uno-r4-${{ hashFiles('firmware/platformio.ini') }}
+      - name: Install PlatformIO
+        run: pip install platformio
+      - name: Build
+        run: pio run -d firmware
