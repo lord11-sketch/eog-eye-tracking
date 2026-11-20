@@ -1,0 +1,20 @@
+{
+  "test_name": "TEST_01_UNFILTERED",
+  "timestamp": "2026-04-10T23:03:19.154361",
+  "channels": {
+    "V": {
+      "channel": "V",
+      "duration_sec": 33.03262162208557,
+      "total_samples": 1499,
+      "sampling_rate_hz": 45.379383360773595,
+      "raw_mean": 8283.47631754503,
+      "raw_std": 2140.5975283342254,
+      "raw_range": 14295,
+      "baseline_drift_total": 0,
+      "drift_rate_uv_per_min": 0.0,
+      "direction_changes": 17,
+      "direction_stability_pct": 98.0,
+      "usability_score": "POOR"
+    }
+  }
+}

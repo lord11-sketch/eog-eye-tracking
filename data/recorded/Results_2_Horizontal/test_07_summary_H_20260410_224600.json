@@ -1,0 +1,31 @@
+{
+  "channel": "H",
+  "duration_sec": 33.036515951156616,
+  "total_samples": 1499,
+  "hz": 45.37403406025688,
+  "signal": {
+    "raw_std": 1887.3675272235448,
+    "filt_std": 1480.3448498493474,
+    "drift_uv_min": 5303.542873159835,
+    "snr_db": -0.03381259587825558,
+    "bl_range": 2920.1763121131316,
+    "noise_floor": 407.02267737419743
+  },
+  "behavior": {
+    "blinks": 16,
+    "resets": 44,
+    "saccades": 1251,
+    "fixations": 399
+  },
+  "performance": {
+    "stab_pct": 28.285523682454972,
+    "changes": 25,
+    "dwell_neg_ms": 669.5726834810697,
+    "dwell_pos_ms": 916.9509627602317
+  },
+  "vs_literature": {
+    "drift_imp_pct": -2551.7714365799175,
+    "stab_imp_pct": 0
+  },
+  "verdict": "RESEARCH_ONLY"
+}

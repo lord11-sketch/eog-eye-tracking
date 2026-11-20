@@ -1,0 +1,8 @@
+method,recordings,trials_per_recording,jitter_ms,direction_agreement_mean_pct,direction_agreement_min_pct,blink_count_spread_mean,blink_count_spread_max
+unfiltered,6,20,1.000,100.000,100.000,,
+rc_bandpass,6,20,1.000,100.000,100.000,,
+soltani,6,20,1.000,100.000,100.000,,
+adaptive,6,20,1.000,99.895,99.332,,
+blink_reset,6,20,1.000,93.125,72.606,4.167,6
+velocity,6,20,1.000,99.981,99.332,,
+combined,6,20,1.000,99.767,97.997,,

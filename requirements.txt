@@ -1,0 +1,8 @@
+# Required for live acquisition (python -m eog live, tools/visualizer_ball.py).
+# Offline replay, analysis tables and the unit tests need only the standard library.
+pyserial>=3.5
+
+# Optional
+matplotlib>=3.7   # analysis/eog_analysis.py --figures
+pygame>=2.5       # tools/visualizer_ball.py
+# scipy           # used by one unit test (Butterworth coefficient cross-check); skipped if absent

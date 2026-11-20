@@ -1,0 +1,26 @@
+# Pristine snapshot of the original student folders (not part of the repo)
+_sources/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Generated outputs (regenerate with the commands in README.md)
+/analysis_output/
+/results/
+
+# PlatformIO / Arduino build products
+.pio/
+firmware/.pio/
+/build/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
